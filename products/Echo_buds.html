@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+          *{box-sizing: border-box;}
+
+          #more {display: none;}
+        </style>
+    </head>
+    <body style="font-family: Verdana, sans-serif; margin: 0">
+        <!--Menu Bar-->
+        <div class="menu_bar" style="display: flex; flex: 0; align-items: center; background-color: black; color: white; position: sticky; position: -webkit-sticky; top: 0; z-index: 1;">
+            <img src="../Resources/example.png" style="width: 50px; margin: 10px;">
+            <a href="../afiliate.html" style="text-decoration: none;">
+              <h3 style="margin: 10px; color: white;">Home</h3>
+            </a>
+            <a href="../products.html" style="text-decoration: none;">
+              <h3 style="margin: 10px; color: white;">Products</h3>
+            </a>
+            <h3 style="margin: 10px;">About</h3>
+          </div>
+          <!--Image-->
+        <div class="product_image" style="display: inline-flex;">
+            <img style="width: 500px; margin: 20px; max-height: 495px;" src="../Echo buds/61zfyWSgVBL._AC_SL1000_.jpeg">
+            <div style="max-width: 100%; margin-left: 20px; margin-right: 20px; position: relative;">
+                <h1>Echo Buds: By Amazon</h1>
+                <p style="text-align: justify;">Lorem ipsum dolor sit amet, ligula</p>
+            </div>
+            <div style="border: solid black; max-width: 290px; margin-top: 10px; margin-right: 10px; height: fit-content;">
+              <div style="margin: 15px;">
+                  <h4>£26.99 / 30.99€ / $33.99</h4>
+                  <p>Notice that prices may vary depending on your location, these are just reference prices</p>
+                  <h4>About this product</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  <button onclick="myFunction()" id="myBtn" style="border-radius: 15px;">Read more</button>
+                  <a href="../test.html"><button>Check offer on Amazon</button></a>
+              </div>
+          </div>
+        </div>
+        
+          
+        
+
+        <footer style="margin-top: 20px; display: flex; flex-direction: column;">
+            <div class="Back_to_top" style="width: 100%; background-color: rgb(55   71  90);">
+                <a href="#" style="text-decoration: none;"><p style="text-align: center; color: white;">Back to top</p></a>
+            </div>
+            <div class="bullshit" style="margin: 0; background-color: rgb(35, 47, 62); color: white; z-index: 0.5;">
+                <h1>Something</h1>
+                <ul>
+                    <li>crap</li>
+                    <li>shit</li>
+                    <li>fuck me</li>
+                    <li>This is boring</li>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if(n > slides.length) {
+                slideIndex = 1
+              }
+              if(n < 1) {
+                slideIndex = slides.length
+              }
+              for(i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for(i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex - 1].style.display = "block";
+              dots[slideIndex - 1].className += " active";
+            }
+
+            function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more"; 
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less"; 
+                moreText.style.display = "inline";
+            }
+            }
+          </script>
+    </body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Title>Something: Products</Title>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+        font-size: 2.2vw;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+      }
+      .mySlides {
+        display: none
+      }
+      img {
+        vertical-align: middle;
+      }
+      .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: 0;
+
+      } 
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: #1111116a;
+      }
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      /* Caption text */
+      .text {
+        color: #ffffff;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        background-color: #11111181;
+      }
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #999999;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      .active,
+      .dot:hover {
+        background-color: #111111;
+      }
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 480px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+          max-width: 10%;
+        }
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      .containers{
+        border-radius: 10px;
+      }
+     
+      .containers h2:hover{
+        color: blue;
+      }
+
+      .products{
+        width: max-content;
+        max-width: 100%;
+      }
+
+      @media screen and (max-width:480px){
+        .products{
+          width: 480px;
+          max-width: 100%;
+        }
+      }
+
+      .products img{
+     
+      width: 300px;
+      max-width: 100%;
+}
+
+        .products h2{
+            font-size: 3.2vw;
+        }
+
+        .menu_bar{
+          max-width: 100%;
+          font-size: 1.5vw;
+          
+        }
+
+        
+
+        
+        @media screen and (max-width: 480px){
+            .menu_bar{
+                 
+                  max-width: 100%;
+                  font-size: 2.4vw;
+            }
+        }
+
+        @media screen and (max-width: 480px){
+          .menu_bar img{
+            max-width: 50%;
+          }
+        }
+
+        .slideshow-container img{
+          width: 45%;
+        }
+
+       
+        @media screen and (max-width: 480px){
+          .slideshow-container img{
+            width: 100% !important;
+            max-width: 75% !important;
+          }
+        }
+
+        footer{
+          width: 100%;
+          max-width: 100%;
+          
+        }
+
+        @media screen and (max-width: 480px){
+          .links{
+            flex-direction: column;
+          }
+        }
+
+        .slideshow-container img{
+          max-width: 70%;
+        }
+
+        @media screen and (max-width:480px){
+          .dot{
+            display: none;
+          }
+          
+        }
+        
+        @media screen and (max-width:480px) {
+          .products img{
+            max-width: 150px;
+            
+          }
+        }
+
+        .products h2{
+          color: black;
+        }
+
+    </style>
+  </head>
+  <body style="margin: 0;">
+    <!--Menu Bar-->
+    <div class="menu_bar" style="display: flex; flex: 0; align-items: center; background-color: black; color: white; position: sticky; position: -webkit-sticky; top: 0; z-index: 1;">
+      <a href="../Something.html"><img src="../products_images/Resources/logo.png" style="width: 50px; margin: 10px;"></a>
+      <a href="../Something.html" style="text-decoration: none;">
+        <h3 style="margin: 10px; color: white;">Home</h3>
+      </a>
+      <a href="#" style="color: #ffffff;">
+        <h3 style="margin: 10px;">Products</h3>
+      </a>
+      <a href="./about.html" style="color: #ffffff;">
+        <h3 style="margin: 10px;">About</h3>
+      </a>
+    </div>
+    <!--Slide show-->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="cases" style="margin: 0; text-align: center; position: relative;justify-content: center;"><h1>Headphones stand</h1><p>A nice complement to your desk</p><img style=" margin: 50px;"src="../products_images/Resources/Headset_stand.jpg"><a href="https://www.amazon.es/dp/B07XVQVYPT?_encoding=UTF8&linkCode=ib1&tag=guilherme0c-21&linkId=145c76a97e828f63dd865624c3643693&ref_=ihub_gshop-asin_B07XVQVYPT" target="_blank"><span style="background-color: rgb(208, 230, 250); position: absolute; left: 50%; top: 100%; transform: translate(-50%, -50%); border-radius: 20px; margin-bottom: 20px;"><p style="margin: 10px; color: black; text-decoration: none;">Check Offer</p></span></a></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="cases" style="margin: 0; text-align: center; position: relative;justify-content: center;"><h1>Echo Buds</h1><p>Earphones by Amazon</p><img style=" margin: 50px;"src="../products_images/Echo buds/41xQKlqYxNL.jpg"><a href="#"><span style="background-color: aliceblue; position: absolute; left: 50%; top: 100%; transform: translate(-50%, -50%); border-radius: 20px; margin-bottom: 20px;"><p style="margin: 10px; color: black; text-decoration: none;">Check offer</p></span></a></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="cases" style="margin: 0; text-align: center; position: relative;justify-content: center;"><h1>Tablet fire 7</h1><p>A tablet by Amazon</p><img style=" margin: 50px;"src="../products_images/tablet fire 7/71POuqajw1L_16-9.jpg"><a href="#"><span style="background-color: aliceblue; position: absolute; left: 50%; top: 100%; transform: translate(-50%, -50%); border-radius: 20px; margin-bottom: 20px;"><p style="margin: 10px; color: black; text-decoration: none;">Check offer</p></span></a></div>
+      </div>
+      <!--Buttons-->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <br>
+    <!--Dots-->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!--Scroll------------------------------------------------------->
+    <div class="see_all product_category" style="display: flex;">
+      <p style="text-align: left; margin-left: 10px;">Tech products</p>
+      <a href="../categories/tech.html" style="flex: 1;"><p style="text-align: right; margin-right: 10px; color: black;">See all</p></a>
+    </div>
+    <div class="products" style="justify-content: center; text-align: center; margin: 0;position: relative;">
+      <div style="max-width:100%; display: flex; overflow: scroll;">
+        <a href="https://www.amazon.es/dp/B07XVQVYPT?_encoding=UTF8&linkCode=ib1&tag=guilherme0c-21&linkId=145c76a97e828f63dd865624c3643693&ref_=ihub_gshop-asin_B07XVQVYPT" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 20px;">
+          <img src="../products_images/Resources/Headset_stand.png" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+          <h2>Headset <br>Stand</h2>
+        </a>
+        <a href="https://www.amazon.es/dp/B085WV7HJR/ref=as_sh_es_2022?_encoding=UTF8&linkCode=ib1&tag=guilherme0c-21&linkId=26bb148e6201646ad49fb26d57ad61a2&ref_=ihub_curatedcontent_3f56a699-3686-43ea-8c58-6730c7ed46ba" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 0;">
+            <img src="../products_images/Echo buds/61gCpUCyXLL.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+            <h2>Headset <br>Stand</h2>
+        </a>
+        
+        <a href="https://www.amazon.es/dp/B099HC8X6H/ref=as_sh_es_2022?_encoding=UTF8&linkCode=ib1&tag=guilherme0c-21&linkId=51cc4dee8b9f00a295f85654c81bd632&ref_=ihub_curatedcontent_16d76d81-4a43-4cad-a129-21975f461efd" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 0;">
+            <img src="../products_images/tablet fire 7/71POuqajw1L.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+            <h2>Headset <br>Stand</h2>
+        </a>
+        <a href="https://www.amazon.es/Hanngo-R-R10-Auriculares-inalámbricos-Resistentes/dp/B09BD8BH3B?ref_=ihub_curatedcontent_e46201bc-7fa2-42c4-b467-ed1bd282f7a6&th=1&psc=1&_encoding=UTF8&linkCode=ib1&tag=guilherme0c-21&linkId=2bb5d91b7b1653610e8ded13dc18bd8e" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 0px 20px 0;">
+            <img src="../products_images/Fones B/41PqHQAxtCL.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+            <h2>Headset <br>Stand</h2>
+        </a>
+        <a href="https://www.amazon.es/dp/B09T67S12N?ref=myi_title_dp&_encoding=UTF8&linkCode=ib1&tag=guilherme0c-21&linkId=9ce291ca0e001cc880392abe600fc546&ref_=ihub_curatedcontent_1f11dfe4-ac06-4710-b0b2-5fa82ecb3cc9" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 20px 20px 0px;">
+          <img src="../products_images/Rec. B/91zUQPgNeBL.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+          <h2>Headset <br>Stand</h2>
+        </a>
+      </div>
+    </div>
+  <div class="see_all product_category" style="display: flex;">
+    <p style="text-align: left; margin-left: 10px;">Home</p>
+    <a style="flex: 1;" href="../categories/Home.html"><p style="text-align: right; margin-right: 10px; flex: 1;">See all</p></a>
+  </div>
+    <div class="products" style="justify-content: center; text-align: center; margin: 0;position: relative;">
+      <div style="max-width:100%; display: flex; overflow: scroll;">
+        <a href=" https://www.amazon.es/dp/B088WWQ3XH?_encoding=UTF8&linkCode=ib1&tag=guilherme0c-21&linkId=84fdab56f2b964631db0b166a8daa182&ref_=ihub_curatedcontent_cfc90b0d-c06d-4888-a4a3-73c6664458f0" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 20px;">
+          <img src="../products_images/Venga!/81bEwKqbMhL.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+          <h2>Headset <br>Stand</h2>
+        </a>
+        <a href="https://amzn.to/3RiNvz2" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 0;">
+            <img src="../products_images/Candeeiro LED/51XdQCl4Z2L.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+            <h2>Headset <br>Stand</h2>
+        </a>
+        
+        <a href="https://amzn.to/3XP10Zg" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 0;">
+            <img src="../products_images/candeeiro infantil/61n5MkcLVpL.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+            <h2>Headset <br>Stand</h2>
+        </a>
+        <a href="https://amzn.to/3GZnJeh" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 0px 20px 0;">
+            <img src="../products_images/Aquecedor/61fbX+bUFgL.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+            <h2>Headset <br>Stand</h2>
+        </a>
+        <a href="https://www.amazon.es/dp/B07481LPMF?_encoding=UTF8&linkCode=ib1&tag=guilherme0c-21&linkId=bb74029fedc49e0cb8ec918aa7c6e086&ref_=ihub_curatedcontent_a3413858-f5c6-484d-9beb-c8bb53eb1794" target="_blank" style="border: solid rgb(213, 213, 213); margin: 20px 20px 20px 0px;">
+          <img src="../products_images/Kitchen/71zOD6CBtLL.jpg" style=" padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+          <h2>Headset <br>Stand</h2>
+        </a>
+                   
+          </div>
+      </div>
+  </div>
+  
+    <!--Bullshit-->
+    <footer style="margin-top: 20px; display: flex; flex-direction: column;">
+      <div class="Back_to_top" style="width: 100%; background-color: rgb(55 71  90);">
+          <a href="#" style="text-decoration: none;"><p style="text-align: center; color: white;">Back to top</p></a>
+      </div>
+      <div class="bullshit" style="margin: 0; background-color: rgb(35, 47, 62) ; color: white; z-index: 0.5; text-align: center;">
+          <h1>Something</h1>
+          <div style="display: flex;" class="links">
+            <div style="display: block; margin: 50px; "><p>About Us</p></div>
+            <div style="display: block; margin: 50px; flex: 1;"><p>Contact Us</p></div>
+            <div style="display: block; margin: 50px;"><p>Social Media</p></div>
+          </div>
+  </footer>
+    <!----------------------------------------------------->
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if(n > slides.length) {
+          slideIndex = 1
+        }
+        if(n < 1) {
+          slideIndex = slides.length
+        }
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for(i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
