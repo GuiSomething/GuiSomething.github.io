@@ -30,9 +30,7 @@
             height: fit-content;
         }
 
-        .menu_bar a{
-            font-size: 2.4vw;
-        }
+        
 
         .menu_bar img{
             max-width: 65px;
@@ -52,7 +50,7 @@
         .welcome span{
             width: fit-content;
             max-width: 100%;
-            font-size: 2.4vw;
+            
         } 
         
         
@@ -84,6 +82,12 @@
           }
         }
 
+        @media screen and (max-width: 480px){
+          .welcome span{
+            font-size: 3.3vw;
+          }
+        }
+
         .welcome img{
             width: 100%;
             max-width: 100%;
@@ -103,9 +107,9 @@
     </style>
     <body style="margin: 0; box-sizing: border-box; font-family: Verdana, sans-serif;">
         <!--Menu Bar---------------------------------.---->
-        <div class="menu_bar" style="display: flex;  align-items: center; background-color: black; color: white; position: sticky; position: -webkit-sticky; top: 0; z-index: 1;"><img src="../products_images/Resources/logo.png" style="margin: 0px 15px 5px 15px;"><a href="./index.html" style="text-decoration: none;"><h3 style="margin: 0px 15px 5px 15px; color: white;">Home</h3></a><a href="./main_pages/products.html" style="text-decoration: none;"><h3 style="color: white; margin: 0px 15px 5px 15px;">Products</h3></a><a href="./main_pages/about.html"><h3 style="margin: 0px 15px 5px 15px; color: white;">About</h3></a></div>
+        <div class="menu_bar" style="display: flex;  align-items: center; background-color: black; color: white; position: sticky; position: -webkit-sticky; top: 0; z-index: 1;"><img src="../products_images/Resources/logo.png" style="margin:10px"><a href="./Something.html" style="text-decoration: none;"><h3 style="margin:10px; color: white;">Home</h3></a><a href="./main_pages/products.html" style="text-decoration: none;"><h3 style="color: white; margin:10px;">Products</h3></a><a href="./main_pages/about.html"><h3 style="margin:10px; color: white;">About</h3></a></div>
         <!--Welcome Page-->
-        <div class="welcome" style="margin: 0;  position: relative; text-align: center;"><img src="../products_images/Resources/tech.jpg"><div id="button" style="box-shadow: 10px, 10px;"><span style="position: absolute; bottom: 10%; left: 50%; transform: translate(-50%, -50%); color: white; background-color: rgb(102, 175, 252); border-radius: 20px; cursor: pointer;"><a href="./main_pages/products.html" style="text-decoration: none;"><p style="margin: 7px; color: white;">Check our Products</p></a></span></div></div>
+        <div class="welcome" style="margin: 0;  position: relative; text-align: center;"><img src="../products_images/Resources/tech.jpg"><div id="button" style="box-shadow: 10px, 10px;"><span style="position: absolute; bottom: 10%; left: 50%; transform: translate(-50%, -50%); color: white; background-color: rgb(102, 175, 252); border-radius: 20px; cursor: pointer;" href="#"><a href="./main_pages/products.html" style="text-decoration: none;"><p style="margin: 7px; color: white;">Check our Products</p></a></span></div></div>
         
         <!--All products-->
         <div class="products_text" style="justify-content: center; text-align: center; margin: 0;">
@@ -127,7 +131,7 @@
             
         </div>
         
-        <!--Bullshit-->
+        <!--footer-->
         <footer style="margin-top: 20px; display: flex; flex-direction: column;">
             <div class="Back_to_top" style="width: 100%; background-color: rgb(55 71  90);">
                 <a href="#" style="text-decoration: none;"><p style="text-align: center; color: white;">Back to top</p></a>

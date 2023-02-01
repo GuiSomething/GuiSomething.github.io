@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            a{
+                text-decoration: none;
+            }
+
+            .container img{
+                max-width: 100%;
+            }
+
+            .container h2{
+                font-size: 3.2vw;
+                color: black;
+            }
+
+            a{
+                width: 500px;
+                max-width: 100%;
+            }
+
+            @media screen and (max-width:480px) {
+                .container{
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body style="margin: 0;">
+        <div id="main">
+            <div style="max-width:100%; display: flex; justify-content: center; text-align: center;" class="container">
+                <a href="../products.html" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 20px">
+                    <img src="../products_images/Resources/Headset_stand.png" style="width: 200px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+                    <h2>Headset <br>Stand</h2>
+                </a>
+                <a href="../products/Headset_stand.html" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 0;">
+                    <img src="../products_images/Echo buds/61gCpUCyXLL.jpg" style="width: 200px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+                    <h2>Headset <br>Stand</h2>
+                </a>
+                
+                <a href="../products/Headset_stand.html" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 0;">
+                    <img src="../products_images/tablet fire 7/71POuqajw1L.jpg" style="width: 200px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+                    <h2>Headset <br>Stand</h2>
+                </a>
+                <a href="../products/Headset_stand.html" style="border: solid rgb(213, 213, 213); margin: 20px 20px 20px 0;">
+                    <img src="../products_images/Fones B/41PqHQAxtCL.jpg" style="width: 200px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+                    <h2>Headset <br>Stand</h2>
+                </a>
+            </div>
+            <div style="max-width:100%; display: flex; justify-content: center; text-align: center;" class="container">
+                <a href="../products/Headset_stand.html" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 20px;">
+                    <img src="../products_images/Rec. B/91zUQPgNeBL.jpg" style="width: 200px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+                    <h2>Headset <br>Stand</h2>
+                </a>
+                <a href="../products/Headset_stand.html" style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 0;">
+                    <img src="../products_images/Portable screen/71XU9xr3ShL.jpg" style="width: 200px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+                    <h2>Headset <br>Stand</h2>
+                </a>
+                <a style="border: solid rgb(213, 213, 213); margin: 20px 0 20px 0;">
+                    <img src="../products_images/Kindle/714brROA9el.jpg" style="width: 200px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+                    <h2>Kindle <br> Reading tablet</h2>
+                </a>
+                <a style="border: solid rgb(213, 213, 213); margin: 20px 20px 20px 0;">
+                    <img src="../products_images/Micro sd/61DwejyTGkL.jpg" style="width: 200px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px;">
+                    <h2>Kindle <br> Reading tablet</h2>
+                </a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more"; 
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less"; 
+                moreText.style.display = "inline";
+            }
+            }
+        </script>
+    </body>
+</html>
